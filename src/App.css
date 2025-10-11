@@ -1,0 +1,18 @@
+/* App styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    background-color: #EFDCAB;
+}
+
+.App {
+    width: 100%;
+    min-height: 100vh;
+}

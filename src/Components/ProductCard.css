@@ -1,0 +1,83 @@
+/* Contenido dentro de la card */
+.card {
+    width: 20%;
+    height: 50vh;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: #f3f7fe;
+    border: 2px solid rgba(15, 14, 14, 0.2);
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card p {
+    text-align: justify;
+    padding: 4px;
+}
+
+/* animación de las card */
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow:
+        0 20px 30px -15px rgba(177, 120, 13, 0.708),
+        0 10px 30px -15px rgba(251, 180, 38, 0.639);
+    border-color: rgb(60, 59, 58);
+}
+
+.card:hover .card__shine {
+    opacity: 1;
+    animation: shine 3s infinite;
+}
+
+.card:hover .card__glow {
+    opacity: 1;
+}
+
+.card:hover .card__badge {
+    transform: scale(5);
+    opacity: 5;
+    z-index: 1;
+}
+
+/* imagen del producto dentro de la card  */
+.imagen-producto {
+    width: 60%;
+    height: 155px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* titulo del producto */
+.nombre-producto {
+    color: var(--card-text);
+    font-size: 1.2em;
+    margin: 10px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* Descripción del producto */
+.descripcion-producto {
+    color: var(--card-text);
+    font-size: 0.7em;
+    margin: 10px;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* Precio del producto */
+.precio-producto {
+    margin: 10px;
+}
