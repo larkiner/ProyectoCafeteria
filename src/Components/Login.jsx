@@ -19,11 +19,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container" style={{ backgroundImage: 'url(/Fondo/coffee.jpg)' }}>
       {/* Encabezado con nombre y logo de la empresa */}
       <header className="Encabezado-login">
         <div className="Contenedor">
-          <img src="/logo.png" alt="Logo" />
+          <img src="public/logo/logo.png" alt="Logo" />
         </div>
         <h1 className="Frase-Encabezado">Donde el café cobra sentido</h1>
       </header>

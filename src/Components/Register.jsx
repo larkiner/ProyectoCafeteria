@@ -29,11 +29,11 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
+    <div className="register-container" style={{ backgroundImage: 'url(/Fondo/coffee.jpg)' }}>
       {/* Encabezado con logo y frase de la empresa */}
       <header className="Encabezado-registro">
         <div className="Contenedor">
-          <img src="/logo.png" alt="Logo" />
+          <img src="public/logo/logo.png" alt="Logo" />
         </div>
         <h1 className="Frase-encabezado">Donde el café cobra sentido</h1>
       </header>
