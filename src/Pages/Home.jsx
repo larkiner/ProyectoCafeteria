@@ -35,8 +35,7 @@ const Home = () => {
         <section className="hero">
           <h1>Bienvenido a Crazy Coffee ☕</h1>
           <p>Tu espacio para crear, conectar y disfrutar.</p>
-          {/* Botón call-to-action que navega a la página del menú */}
-          <Link to="/menu" className="cta-button">Explora el Menú</Link>
+
         </section>
 
         {/* Sección de características y servicios del establecimiento */}

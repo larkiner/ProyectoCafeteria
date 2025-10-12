@@ -64,10 +64,10 @@ const Header = () => {
             Bebidas
           </Link>
           <Link 
-            className={`comida ${isActive('/menu#comida') ? 'active' : ''}`} 
+            className={`Comestibles ${isActive('/menu#comida') ? 'active' : ''}`} 
             to="/menu#comida"
           >
-            Comida
+            Comestibles
           </Link>
         </div>
       </main>

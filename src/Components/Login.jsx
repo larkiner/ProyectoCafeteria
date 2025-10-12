@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -23,7 +23,9 @@ const Login = () => {
       {/* Encabezado con nombre y logo de la empresa */}
       <header className="Encabezado-login">
         <div className="Contenedor">
-          <img src="public/logo/logo.png" alt="Logo" />
+          <Link to="/">
+            <img src="public/logo/logo.png" alt="Logo" />
+          </Link>
         </div>
         <h1 className="Frase-Encabezado">Donde el café cobra sentido</h1>
       </header>
