@@ -1,30 +1,105 @@
+/**
+ * Estilos CSS para el componente Home
+ * 
+ * Este archivo contiene todos los estilos necesarios para la página principal
+ * de Crazy Coffee, incluyendo el diseño de las secciones hero, características y promociones.
+ * 
+ * @file Home.css
+ * @description Estilos para la página de inicio estática
+ * 
+ * Paleta de colores utilizada:
+ * - #EFDCAB: Fondo principal del contenedor
+ * - #F3E9DC: Fondo del contenido principal
+ * - #C08552: Color de la sección hero
+ * - #402218: Color de texto y botones
+ * - #8C5C3B: Color hover y títulos
+ * - #FFF: Fondo de las tarjetas de características
+ */
+
+/* Contenedor principal de la página de inicio */
 .home-container {
     font-family: "Open Sans", sans-serif;
     width: 100%;
     background-color: #EFDCAB;
 }
 
-/* sección donde aparecen los productos en este caso las bebidas */
-.Contenido {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+/* Estilos para el contenido principal de la página de inicio */
+.home {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F3E9DC;
+    color: #402218;
+    padding: 2rem;
 }
 
-/* titulo bebidas */
-.titulo-contenido {
-    margin-top: 2%;
-    font-size: 80px;
-    font-weight: 310;
+/* Sección hero - Mensaje de bienvenida principal */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #C08552;
+    color: #F3E9DC;
+    border-radius: 12px;
 }
 
-.cards {
-    width: 100%;
-    height: 100vh;
+/* Título principal de la sección hero */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Párrafo descriptivo de la sección hero */
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botón call-to-action para explorar el menú */
+.cta-button {
+    background-color: #402218;
+    color: #F3E9DC;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón call-to-action */
+.cta-button:hover {
+    background-color: #8C5C3B;
+}
+
+/* Contenedor de las tarjetas de características */
+.features {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+/* Tarjetas individuales de características (Coworking, Juegos, Talleres) */
+.feature {
+    background-color: #FFF;
+    border: 2px solid #C08552;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de las características */
+.feature h2 {
+    color: #8C5C3B;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección de promociones especiales */
+.promo {
+    margin-top: 4rem;
+    text-align: center;
+    background-color: #8C5C3B;
+    color: #F3E9DC;
+    padding: 2rem;
+    border-radius: 10px;
 }
