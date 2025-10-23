@@ -29,6 +29,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // Tailwind CSS eliminado
 import './Header.css';
+import logo from '../../assets/logo/logo.png';
 
 const Header = () => {
   // Hook para obtener la ubicación actual
@@ -53,7 +54,7 @@ const Header = () => {
           {/* Logo de la empresa - Click para ir al home */}
           <Link to="/" className="logo-link">
               <div className="logo">
-                <img src="public/logo/logo.png" alt="Logo de Crazzy Coffee" />
+                <img src={logo} alt="Logo de Crazzy Coffee" />
               </div>
           </Link>
           

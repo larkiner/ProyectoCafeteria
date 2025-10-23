@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import logo from '../../assets/logo/logo.png';
+import fondo from '../../assets/Fondo/coffee.jpg';
 // Tailwind CSS eliminado
 import './Login.css';
 
@@ -20,12 +22,12 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container" style={{ backgroundImage: 'url(/Fondo/coffee.jpg)' }}>
+    <div className="login-container" style={{ backgroundImage: `url(${fondo})` }}>
       {/* Encabezado con nombre y logo de la empresa */}
       <header className="Encabezado-login">
         <div className="Contenedor">
           <Link to="/">
-            <img src="public/logo/logo.png" alt="Logo" />
+            <img src={logo} alt="Logo" />
           </Link>
         </div>
         <h1 className="Frase-Encabezado">Donde el café cobra sentido</h1>
