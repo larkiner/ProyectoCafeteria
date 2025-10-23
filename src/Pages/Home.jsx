@@ -33,7 +33,7 @@ const Home = () => {
       <main className="home">
         {/* Sección hero con mensaje de bienvenida y call-to-action */}
         <section className="hero">
-          <h1>Bienvenido a Crazy Coffee ☕</h1>
+          <h1>Bienvenido a Crazy Coffee</h1>
           <p>Tu espacio para crear, conectar y disfrutar.</p>
 
         </section>

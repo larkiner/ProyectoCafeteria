@@ -29,23 +29,23 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container" style={{ backgroundImage: 'url(/Fondo/coffee.jpg)' }}>
+    <div className="register-container">
       {/* Encabezado con logo y frase de la empresa */}
       <header className="Encabezado-registro">
-        <div className="Contenedor">
+        <div className="logo-container">
           <Link to="/">
-            <img src="public/logo/logo.png" alt="Logo" />
+            <img src="../public/logo/logo.png" alt="Logo" style={{ maxWidth: '150px', height: 'auto', display: 'block', margin: '0 auto' }} />
           </Link>
         </div>
         <h1 className="Frase-encabezado">Donde el café cobra sentido</h1>
       </header>
 
       {/* Formulario de registro */}
-      <form className="Registro" onSubmit={handleSubmit}>
-        <h2 className="titulo-Registro">Registro</h2>
+      <form className="Registro" onSubmit={handleSubmit} style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)', maxWidth: '600px', width: '100%' }}>
+        <h2 className="titulo-Registro" style={{ color: '#654828', marginBottom: '20px', textAlign: 'center' }}>Registro</h2>
         
         <div className="Contenedor-nombre-apellido">
-          <div className="Contenedor-input">
+          <div className="Contenedor-input-nombre">
             <input 
               required 
               id="nombre" 
@@ -56,10 +56,10 @@ const Register = () => {
               value={formData.nombre}
               onChange={handleInputChange}
             />
-            <label className="user-label">NOMBRE</label>
+            <label className="user-label-nombre">NOMBRE</label>
           </div>
 
-          <div className="Contenedor-input">
+          <div className="Contenedor-input-apellido">
             <input 
               required 
               id="apellido" 
@@ -70,7 +70,7 @@ const Register = () => {
               value={formData.apellido}
               onChange={handleInputChange}
             />
-            <label className="user-label">APELLIDO</label>
+            <label className="user-label-apellido">APELLIDO</label>
           </div>
         </div>
 
@@ -117,8 +117,8 @@ const Register = () => {
         </div>
 
         <div className="Contenedor-botones">
-          <button type="submit">GUARDAR</button>
           <button type="button" onClick={() => navigate('/')}>VOLVER</button>
+          <button type="submit">GUARDAR</button>
         </div>
       </form>
     </div>

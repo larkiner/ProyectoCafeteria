@@ -27,12 +27,13 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+// Tailwind CSS eliminado
 import './Header.css';
 
 const Header = () => {
   // Hook para obtener la ubicación actual
   const location = useLocation();
-  
+
   // Función para determinar si un enlace está activo
   const isActive = (path) => {
     if (path === '/menu#bebidas') {
@@ -51,27 +52,27 @@ const Header = () => {
         <div className="Contenedor-principal">
           {/* Logo de la empresa - Click para ir al home */}
           <Link to="/" className="logo-link">
-            <div className="logo">
-              <img src="public/logo/logo.png" alt="Logo de Crazzy Coffee" />
-            </div>
+              <div className="logo">
+                <img src="public/logo/logo.png" alt="Logo de Crazzy Coffee" />
+              </div>
           </Link>
           
           {/* Enlaces de navegación a secciones del menú con anclas */}
-          <Link 
-            className={`bebidas ${isActive('/menu#bebidas') ? 'active' : ''}`} 
+          <Link
+            className={`bebidas ${isActive('/menu#bebidas') ? 'active' : ''}`}
             to="/menu#bebidas"
           >
             Bebidas
           </Link>
-          <Link 
-            className={`Comestibles ${isActive('/menu#comida') ? 'active' : ''}`} 
+          <Link
+            className={`Comestibles ${isActive('/menu#comida') ? 'active' : ''}`}
             to="/menu#comida"
           >
             Comestibles
           </Link>
         </div>
       </main>
-      
+
       {/* Sección de botones de autenticación */}
       <main className="menu">
         <div className="Contenedor-secundario">
@@ -79,7 +80,7 @@ const Header = () => {
           <Link to="/register">
             <button id="registro">Registrate</button>
           </Link>
-          
+
           {/* Botón de inicio de sesión */}
           <Link to="/login">
             <button id="login">Iniciar sesión</button>
