@@ -1,7 +1,7 @@
 /* Contenido dentro de la card */
 .card {
-    width: 20%;
-    height: 50vh;
+    width: 37vh;
+    height: 47vh;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
@@ -12,13 +12,21 @@
 
 .info-producto {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    
 }
 
+/* Oculta el párrafo por defecto */
 .card p {
     text-align: justify;
     padding: 4px;
+    display: none;
+}
+
+/* Muestra el párrafo solo en hover de la card */
+.card:hover p {
+    display: block;
 }
 
 /* animación de las card */

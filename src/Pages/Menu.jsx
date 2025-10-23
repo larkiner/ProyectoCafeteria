@@ -82,6 +82,7 @@ const Menu = () => {
   const bebidas = [
     {
       id: 1,
+      img: "/Cafeamericano.jpeg",
       name: "Americano",
       description: "Un café suave y aromático, preparado con espresso y agua caliente. Ideal para quienes buscan una experiencia clásica con cuerpo ligero y sabor equilibrado.",
       price: "5000$",

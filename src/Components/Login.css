@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     padding: 100px;
-    background: url('/coffee.jpg');
+    background: url('/Fondo/coffee.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -57,7 +57,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/coffee.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-size: cover;
     background-position: center;
     gap: 20px;
@@ -89,7 +89,7 @@
 /* Etiqueta del campo de entrada */
 .user-label {
     position: absolute;
-    left: 15px;
+    left: 20px;
     color: #e8e8e8;
     pointer-events: none;
     transform: translateY(1rem);
@@ -113,7 +113,7 @@ input:valid~label {
 }
 
 /* Estilos generales para los botones */
-button {
+.button-login {
     width: 170px;
     height: 40px;
     border-radius: 40px;
@@ -128,14 +128,14 @@ button {
 }
 
 /* Estilos para el botón cuando el cursor está sobre él */
-button:hover {
+.button-login:hover {
     background-color: hsl(39, 91%, 53%);
     color: hsl(0, 0%, 100%);
     box-shadow: rgb(241, 186, 67) 0px 0px 0px 0px;
 }
 
 /* Estilos para el botón cuando está activo (presionado) */
-button:active {
+.button-login:active {
     background-color: hsl(38, 98%, 49%);
     color: hsl(0, 0%, 100%);
     box-shadow: rgb(220, 150, 10) 0px 0px 0px 0px;

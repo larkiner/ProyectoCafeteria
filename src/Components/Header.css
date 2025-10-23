@@ -1,4 +1,7 @@
+
+
 /* Encabezado de la página */
+
 .Encabezado {
     width: 100%;
     height: 15vh;
@@ -33,7 +36,7 @@
 
 /* Efecto hover para el logo */
 .logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.00);
 }
 
 /* imagen del logo */
@@ -45,7 +48,8 @@
 }
 
 /* Estilos del enlace dentro del contenedor principal */
-.Contenedor-principal a {
+.Contenedor-principal .bebidas,
+.Contenedor-principal .Comestibles {
     position: relative;
     color: white;
     text-decoration: none;
@@ -54,13 +58,13 @@
     transition: .5s ease;
 }
 
-/* Cambia de color al colocar el cursor sobre el enlace */
-.Contenedor-principal a:hover{
+.Contenedor-principal .bebidas:hover,
+.Contenedor-principal .Comestibles:hover {
     color: #D98324;
 }
 
-/* Estilo del subrayado del enlace */
-.Contenedor-principal a::after {
+.Contenedor-principal .bebidas::after,
+.Contenedor-principal .Comestibles::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -71,30 +75,31 @@
     transition: width 0.3s ease;
 }
 
-/* Cambia el ancho del subrayado al colocar el cursor sobre el enlace */
-.Contenedor-principal a:hover::after {
+.Contenedor-principal .bebidas:hover::after,
+.Contenedor-principal .Comestibles:hover::after {
     width: 100%;
 }
 
-/* Estilos para enlaces activos */
-.Contenedor-principal a.active {
+.Contenedor-principal .bebidas.active,
+.Contenedor-principal .Comestibles.active {
     color: #D98324;
     font-weight: bold;
 }
 
-/* Subrayado permanente para enlaces activos */
-.Contenedor-principal a.active::after {
+.Contenedor-principal .bebidas.active::after,
+.Contenedor-principal .Comestibles.active::after {
     width: 100%;
     background-color: #D98324;
 }
 
-/* Efecto especial para enlaces activos al hacer hover */
-.Contenedor-principal a.active:hover {
+.Contenedor-principal .bebidas.active:hover,
+.Contenedor-principal .Comestibles.active:hover {
     color: #FFB366;
 }
 
 .Contenedor-secundario {
     display: flex;
+    justify-content: space-between;
     justify-content: end;
 }
 
@@ -103,7 +108,7 @@ button {
     color: #f7f4f4;
     border: none;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 125px;
     height: 50px;
     transition: 0.3s;
@@ -115,5 +120,5 @@ button {
 button:hover {
     background-color: #D98324;
     box-shadow: 0 0 0 3px #f0a95d;
-    color: #fff;
+    color: #161313;
 }
