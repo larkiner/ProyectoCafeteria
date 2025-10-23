@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Register.css';
+import logo from '../../assets/logo/logo.png';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ const Register = () => {
       <header className="Encabezado-registro">
         <div className="logo-container">
           <Link to="/">
-            <img src="../public/logo/logo.png" alt="Logo" style={{ maxWidth: '150px', height: 'auto', display: 'block', margin: '0 auto' }} />
+            <img src={logo} alt="Logo" style={{ maxWidth: '150px', height: 'auto', display: 'block', margin: '0 auto' }} />
           </Link>
         </div>
         <h1 className="Frase-encabezado">Donde el café cobra sentido</h1>

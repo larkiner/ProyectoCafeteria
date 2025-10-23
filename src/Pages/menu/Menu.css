@@ -27,11 +27,12 @@
 /* Sección donde aparecen los productos (bebidas y comida) */
 .Contenido {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 /* Títulos de las secciones (Bebidas, Comida) */
@@ -39,15 +40,34 @@
     margin-top: 2%;
     font-size: 80px;
     font-weight: 310;
+    margin-bottom: 2rem;
 }
 
 /* Contenedor de las tarjetas de productos */
 .cards {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    max-width: 1280px; /* Limita el ancho para mantener 4 columnas en pantallas grandes */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+    padding: 0 2rem;
+}
+
+/* Responsive: 2 columnas en pantallas medianas, 1 columna en pantallas pequeñas */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
 }
 
 /* Contenedor del botón de regreso */

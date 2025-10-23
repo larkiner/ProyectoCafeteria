@@ -21,10 +21,11 @@
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../Pages/Home';
-import Menu from '../Pages/Menu';
-import LoginPage from '../Pages/LoginPage';
-import RegisterPage from '../Pages/RegisterPage';
+import Home from '../Pages/home/Home'
+import Menu from '../Pages/menu/Menu';
+import LoginPage from '../Pages/auth/LoginPage';
+import RegisterPage from '../Pages/auth/RegisterPage';
+import Header from '../Components/header/Header';
 
 // El componente AppRoutes solo debe definir las rutas,
 // el <Router> debería envolverse a nivel superior (ej: en index.jsx o App.jsx).
@@ -33,19 +34,22 @@ import RegisterPage from '../Pages/RegisterPage';
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      {/* Ruta principal - Página de inicio */}
-      <Route path="/" element={<Home />} />
+    <>
+      <Header />
+      <Routes>
+        {/* Ruta principal - Página de inicio */}
+        <Route path="/" element={<Home />} />
 
-      {/* Ruta del menú - Página de productos con navegación por anclas */}
-      <Route path="/menu" element={<Menu />} />
+        {/* Ruta del menú - Página de productos con navegación por anclas */}
+        <Route path="/menu" element={<Menu />} />
 
-      {/* Ruta de autenticación - Página de login */}
-      <Route path="/login" element={<LoginPage />} />
+        {/* Ruta de autenticación - Página de login */}
+        <Route path="/login" element={<LoginPage />} />
 
-      {/* Ruta de registro - Página de registro de usuarios */}
-      <Route path="/register" element={<RegisterPage />} />
-    </Routes>
+        {/* Ruta de registro - Página de registro de usuarios */}
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </>
   );
 };
 

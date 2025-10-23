@@ -1,0 +1,252 @@
+/* 🌐 Contenedor principal del Home */
+.home-container {
+    background-color: #fdf7f2;
+    /* Fondo cálido y suave */
+    font-family: 'Segoe UI', sans-serif;
+    /* Tipografía moderna */
+    color: #4b2e2e;
+    /* Color principal del texto */
+}
+
+/* 🟫 Sección Hero con imagen de bienvenida */
+.welcome {
+    text-align: center;
+    margin: 0 auto 4rem;
+    max-width: 1440px;
+    padding: 1rem 1rem;
+    border-radius:1rem;
+    width: 100%;
+}
+
+.welcome-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(107, 62, 62, 0.15);
+}
+
+.welcome-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    will-change: transform;
+    opacity: 1;
+}
+
+.welcome-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+    color: white;
+    padding: 2rem;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.welcome-overlay h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.welcome-overlay p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Efecto sutil al pasar el mouse por encima */
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.welcome-container:hover .welcome-image::after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.welcome-container:hover .welcome-image {
+    transform: scale(1.05);
+}
+
+/* Feature container: imagen con overlay (misma idea que welcome) */
+.feature-container {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.35s ease;
+    opacity: 1;
+}
+
+.feature-overlay {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.feature-overlay h2 {
+    font-size: 1.6rem;
+    margin-bottom: .6rem;
+}
+
+.feature-overlay p {
+    font-size: 1rem;
+    max-width: 320px;
+}
+
+/* Hover effect */
+.feature-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.35s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.feature-container:hover .feature-image::after {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.feature-container:hover .feature-image {
+    transform: scale(1.06);
+}
+
+/* 🧩 Sección de características del café */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-container {
+    background-color: #fffaf5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.feature h2 {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: #6b3e3e;
+}
+
+.feature p {
+    margin: 0 1rem 1.5rem;
+    font-size: 1rem;
+    color: #5a3a3a;
+}
+
+/* 🎉 Sección de promociones especiales */
+.promo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff3e6;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promo img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 2rem;
+}
+
+.promo-text {
+    max-width: 400px;
+}
+
+.promo-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.promo-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.promo-button {
+    display: inline-block;
+    background-color: #6b3e3e;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.promo-button:hover {
+    background-color: #4b2e2e;
+}
